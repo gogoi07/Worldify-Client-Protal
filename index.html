@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worldify Overseas - Client Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="login-page">
+        <div class="login-container">
+            <div class="login-header">
+                <img src="https://via.placeholder.com/180x60/1e40af/ffffff?text=Worldify+Overseas" alt="Worldify Overseas" class="logo">
+                <p class="tagline">Stop Dreaming, Start Doing</p>
+            </div>
+            
+            <form id="loginForm" class="login-form">
+                <h2>Client Portal Login</h2>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <div class="login-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="rememberMe">
+                        <span class="checkmark"></span>
+                        Remember Me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full-width">Sign In</button>
+            </form>
+            
+            <div class="login-footer">
+                <p>Need help? Contact us at <a href="mailto:support@worldifyoverseas.com">support@worldifyoverseas.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="mainApp" class="main-app hidden">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <button id="sidebarToggle" class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <img src="https://via.placeholder.com/120x40/1e40af/ffffff?text=Worldify" alt="Worldify Overseas" class="header-logo">
+            </div>
+            <div class="header-right">
+                <div class="user-menu">
+                    <span class="user-name">Priya Sharma</span>
+                    <button id="logoutBtn" class="btn btn--outline btn--sm">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" data-section="dashboard">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="tracking">
+                            <i class="fas fa-route"></i>
+                            <span>Application Tracking</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="documents">
+                            <i class="fas fa-folder-open"></i>
+                            <span>Documents</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="messages">
+                            <i class="fas fa-comments"></i>
+                            <span>Messages</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="profile">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="content-section active">
+                <div class="page-header">
+                    <h1>Welcome back, Priya!</h1>
+                    <p class="page-subtitle">Here's an overview of your application progress</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Application Date</h3>
+                            <p class="stat-value">Oct 15, 2024</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Days Since Submission</h3>
+                            <p class="stat-value">106 days</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Current Status</h3>
+                            <p class="stat-value">Visa Processing</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Next Action</h3>
+                            <p class="stat-value">Update Medical Certificate</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Overview -->
+                <div class="progress-overview">
+                    <h2>Application Progress</h2>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 77%"></div>
+                        </div>
+                        <p class="progress-text">7 of 9 stages completed</p>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>New message from Ms. Arti Sharma</strong></p>
+                                <p class="activity-meta">Jan 28, 2025 - Visa Processing Update</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-file-upload"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Financial Documents uploaded</strong></p>
+                                <p class="activity-meta">Jan 8, 2025 - Under review</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Offer Letter Received</strong></p>
+                                <p class="activity-meta">Dec 18, 2024 - University of Manchester</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Application Tracking Section -->
+            <section id="tracking" class="content-section">
+                <div class="page-header">
+                    <h1>Application Tracking</h1>
+                    <p class="page-subtitle">Track your application progress through each stage</p>
+                </div>
+
+                <div class="application-info">
+                    <div class="info-card">
+                        <h3>Application Details</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <label>Application ID:</label>
+                                <span>WO2024-0892</span>
+                            </div>
+                            <div class="info-item">
+                                <label>Service:</label>
+                                <span>Study Abroad - Masters in Computer Science</span>
+                            </div>
+                            <div class="info-item">
+                                <label>Destination:</label>
+                                <span>United Kingdom</span>
+                            </div>
+                            <div class="info-item">
+                                <label>Consultant:</label>
+                                <span>Ms. Arti Sharma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline" id="applicationTimeline">
+                        <!-- Timeline items will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Documents Section -->
+            <section id="documents" class="content-section">
+                <div class="page-header">
+                    <h1>Document Management</h1>
+                    <p class="page-subtitle">Upload required documents and download templates</p>
+                </div>
+
+                <div class="documents-grid">
+                    <div class="documents-upload">
+                        <h2>Upload Documents</h2>
+                        <div class="upload-area" id="uploadArea">
+                            <div class="upload-content">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Drag and drop files here or <button class="upload-btn">Browse Files</button></p>
+                                <p class="upload-note">Supported formats: PDF, JPG, PNG (Max 10MB)</p>
+                            </div>
+                            <input type="file" id="fileInput" multiple accept=".pdf,.jpg,.jpeg,.png" class="hidden">
+                        </div>
+                    </div>
+
+                    <div class="documents-list">
+                        <h2>Document Checklist</h2>
+                        <div class="document-items" id="documentsList">
+                            <!-- Document items will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Messages Section -->
+            <section id="messages" class="content-section">
+                <div class="page-header">
+                    <h1>Communication Hub</h1>
+                    <p class="page-subtitle">Messages with your consultant</p>
+                </div>
+
+                <div class="messages-container">
+                    <div class="messages-list" id="messagesList">
+                        <!-- Messages will be populated by JavaScript -->
+                    </div>
+
+                    <div class="message-compose">
+                        <h3>Send New Message</h3>
+                        <form id="messageForm" class="compose-form">
+                            <div class="form-group">
+                                <label for="messageSubject" class="form-label">Subject</label>
+                                <input type="text" id="messageSubject" class="form-control" placeholder="Enter subject">
+                            </div>
+                            <div class="form-group">
+                                <label for="messageContent" class="form-label">Message</label>
+                                <textarea id="messageContent" class="form-control" rows="4" placeholder="Type your message here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Section -->
+            <section id="profile" class="content-section">
+                <div class="page-header">
+                    <h1>Profile Management</h1>
+                    <p class="page-subtitle">Manage your personal information and account settings</p>
+                </div>
+
+                <div class="profile-container">
+                    <div class="profile-form">
+                        <h2>Personal Information</h2>
+                        <form id="profileForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullName" class="form-label">Full Name</label>
+                                    <input type="text" id="fullName" class="form-control" value="Priya Sharma">
+                                </div>
+                                <div class="form-group">
+                                    <label for="profileEmail" class="form-label">Email Address</label>
+                                    <input type="email" id="profileEmail" class="form-control" value="priya.sharma@email.com">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" id="phone" class="form-control" value="+91-9876543210">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dateOfBirth" class="form-label">Date of Birth</label>
+                                    <input type="date" id="dateOfBirth" class="form-control" value="1998-05-15">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address" class="form-label">Address</label>
+                                <textarea id="address" class="form-control" rows="3">123 Main Street, New Delhi, India - 110001</textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary">Update Profile</button>
+                        </form>
+                    </div>
+
+                    <div class="profile-sidebar">
+                        <div class="profile-card">
+                            <div class="profile-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <h3>Priya Sharma</h3>
+                            <p>Client ID: WO2024-0892</p>
+                            <p class="status success">Active Account</p>
+                        </div>
+
+                        <div class="account-settings">
+                            <h3>Account Settings</h3>
+                            <div class="setting-item">
+                                <label>Email Notifications</label>
+                                <input type="checkbox" checked>
+                            </div>
+                            <div class="setting-item">
+                                <label>SMS Updates</label>
+                                <input type="checkbox" checked>
+                            </div>
+                            <button class="btn btn--outline btn--full-width">Change Password</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
